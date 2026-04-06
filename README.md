@@ -1,56 +1,67 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + TypeScript + Vite
+=======
+# Kanban Board App
+>>>>>>> 4b8b93195625117b6c25e4de13622d98c8ab812a
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Kanban board application built with React, TypeScript, Zustand, and Drag & Drop functionality using dnd-kit.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Features
 
-## React Compiler
+*  Add new tasks
+*  Edit existing tasks (modal popup)
+*  Delete tasks with confirmation
+*  Search tasks by title or description
+*  Drag & Drop tasks between columns
+*  Columns:
+  * Backlog
+  * In Progress
+  * Review
+  * Done
+*  Infinite scroll inside each column
+*  Toast notifications for actions
+*  Optimized state management using Zustand
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend:** React + TypeScript
+* **State Management:** Zustand
+* **Drag & Drop:** dnd-kit
+* **Styling:** Bootstrap
+* **API:** JSON Server (REST API)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+##  Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+src/
+│── components/
+│   ├── board/
+│   │   └── Column.tsx
+│   ├── TaskCard.tsx
+│   ├── AddTask.tsx
+│   ├── Toast.tsx
+│
+│── store/
+│   └── useTaskStore.ts
+│
+│── types/
+│   └── task.ts
+│
+│── api/
+│   └── tasks.ts
+│
+│── App.tsx
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Run the App
 
+<<<<<<< HEAD
 export default defineConfig([
   globalIgnores(['dist']),
   {
@@ -75,3 +86,55 @@ export default defineConfig([
 =======
 # kanban-board
 >>>>>>> aba6fdd6c0693c9ef1ba06fbf950766dad3f4e57
+=======
+npm run dev
+
+##  Run JSON Server
+
+npx json-server --watch db.json --port 3000
+
+## Key Concepts Used
+
+* Drag & Drop with dnd-kit
+* Global state with Zustand
+* Component-based architecture
+* Controlled forms (Add / Edit)
+* Infinite scrolling using Intersection Observer
+* API integration (CRUD operations)
+
+---
+
+##  Challenges & Solutions
+
+###  Drag blocking button clicks
+
+ Solved by using drag handle instead of full card
+
+###  Empty cards during drag
+
+ Fixed by ensuring full task object is updated
+
+###  TypeScript issues with column
+
+ Solved using union types and type casting
+
+###  Infinite scroll breaking updates
+
+ Fixed by resetting visible count on state change
+ 
+##  Future Improvements
+
+*  Reorder tasks inside same column
+*  Better UI/UX animations
+*  Authentication system
+*  responsiveness improvements
+
+
+##  Author
+
+Ahmed Fathy
+Frontend Developer
+
+
+## ⭐ Give it a star if you like it!
+>>>>>>> 4b8b93195625117b6c25e4de13622d98c8ab812a
