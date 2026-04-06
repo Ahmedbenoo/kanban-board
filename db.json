@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Setup project",
+      "description": "Install dependencies and configure the kanban board",
+      "column": "in_progress"
+    },
+    {
+      "id": 2,
+      "title": "Develop UI",
+      "description": "Implement columns and task cards",
+      "column": "backlog"
+    },
+    {
+      "id": 3,
+      "title": "Review tasks",
+      "description": "Verify task details and fix layout issues",
+      "column": "review"
+    },
+    {
+      "id": 4,
+      "title": "Finish feature",
+      "description": "Move completed tasks to done",
+      "column": "done"
+    },
+    {
+      "id": 5,
+      "title": "Finish feature",
+      "description": "Move completed tasks to done",
+      "column": "done"
+    },
+    {
+      "id": 6,
+      "title": "Finish feature",
+      "description": "Move completed tasks to done",
+      "column": "done"
+    }
+  ]
+}
